@@ -1,0 +1,7 @@
+# Linux konteynerinde build ediliyor: satır sonları daima LF kalsın
+* text=auto eol=lf
+*.html text eol=lf
+Dockerfile text eol=lf
+nginx.conf text eol=lf
+*.woff2 binary
+*.webp binary

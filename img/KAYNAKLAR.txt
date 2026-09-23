@@ -1,0 +1,8 @@
+Görseller — hepsi CC0 (kamu malı), atıf zorunlu değil. Openverse (openverse.org) üzerinden bulundu.
+Sitede sıcak/mat bir renk ayarı uygulanmış ve WebP'ye çevrilmiştir.
+
+sabah-*.webp      "a cup of coffee, a flower and a laptop"  https://live.staticflickr.com/333/31512220131_160ab578c7_b.jpg
+hazirim-*.webp    "Journal Notepad" — StockSnap            https://cdn.stocksnap.io/img-thumbs/960w/DPKNIIN5X3.jpg
+aksam-*.webp      "candle with books" — Flickr              https://live.staticflickr.com/5592/15288575081_58e210c861_b.jpg
+kalem-*.webp      "Pen Ink" — StockSnap                     https://cdn.stocksnap.io/img-thumbs/960w/V8A98C0U96.jpg
+baslangic-*.webp  "Running Shoes" — StockSnap               https://cdn.stocksnap.io/img-thumbs/960w/645GI8G1W4.jpg
