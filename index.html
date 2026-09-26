@@ -221,7 +221,7 @@ section{padding-block:clamp(72px, 11vw, 140px)}
 .hero .wrap{display:grid;gap:clamp(48px, 7vw, 80px);align-items:center}
 @media (min-width:940px){ .hero .wrap{grid-template-columns:1.12fr .88fr} }
 .hero h1{
-  font-size:clamp(2.75rem, 8.4vw, 5.6rem);
+  font-size:clamp(2.6rem, 7.4vw, 4.9rem);
   line-height:1.0;letter-spacing:-.03em;font-weight:360;
   margin:26px 0 28px;
 }
@@ -407,35 +407,56 @@ section{padding-block:clamp(72px, 11vw, 140px)}
 .band-quote::before{content:"“";color:var(--band-accent);margin-right:.08em}
 .band-quote::after{content:"”";color:var(--band-accent);margin-left:.04em}
 
-/* ───────────────────────── 21 days ───────────────────────── */
-.days-grid{display:grid;gap:clamp(40px,6vw,80px);align-items:start}
-@media (min-width:980px){ .days-grid{grid-template-columns:1.05fr .95fr} }
-.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:clamp(6px,1.2vw,10px)}
-.cal .d{
-  aspect-ratio:1;border-radius:12px;border:1px solid var(--line);background:var(--surface);
-  display:flex;flex-direction:column;justify-content:space-between;padding:clamp(6px,1vw,10px);
-  font-family:var(--serif);font-size:clamp(.95rem,1.8vw,1.2rem);color:var(--ink-3);position:relative;
-  transition:transform .3s var(--ease), background-color .3s var(--ease);
-}
-.cal .d.is-on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.cal .d.is-on::after{content:"";position:absolute;right:8px;bottom:8px;width:6px;height:6px;border-radius:50%;background:currentColor}
-.cal .d.done{background:var(--accent-soft);border-color:transparent;color:var(--accent)}
-.cal-legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:18px;font-size:.88rem;color:var(--ink-3)}
-.cal-legend span{display:inline-flex;align-items:center;gap:8px}
-.cal-legend i{width:12px;height:12px;border-radius:4px;display:inline-block}
-.cal-note{
-  margin-top:28px;display:flex;gap:16px;align-items:flex-start;padding:22px 24px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line)
-}
-.cal-note b{font-family:var(--serif);font-weight:500;font-size:1.15rem;display:block;margin-bottom:2px}
-.cal-note p{margin:0;color:var(--ink-2);font-size:.98rem}
-.cal-note .pill{flex:none;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--accent);color:var(--accent-ink);border-radius:8px;padding:6px 9px;margin-top:3px}
+/* ───────────────────────── Outcomes ───────────────────────── */
+.gain-grid{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+@media (min-width:700px){ .gain-grid{grid-template-columns:repeat(2,1fr)} }
+@media (min-width:1020px){ .gain-grid{grid-template-columns:repeat(3,1fr);gap:22px} }
+.gain{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px 24px;display:flex;flex-direction:column;gap:10px;transition:border-color .25s var(--ease), transform .25s var(--ease)}
+.gain:hover{border-color:var(--line-2);transform:translateY(-2px)}
+.gain-n{font-family:var(--serif);font-style:italic;font-size:2.4rem;line-height:1;color:var(--accent);margin-bottom:6px}
+.gain h3{font-size:1.45rem;line-height:1.18}
+.gain p{margin:0;color:var(--ink-2);font-size:.99rem}
+.gain-days{margin-top:auto;padding-top:12px;align-self:flex-start;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);text-decoration:none;border-bottom:1px solid var(--line-2);min-height:36px;display:inline-flex;align-items:flex-end}
+.gain-days:hover{color:var(--accent);border-color:var(--accent)}
+.gain-final{margin-top:clamp(36px,5vw,56px);padding:clamp(28px,4vw,44px);border-radius:var(--radius);background:var(--band-bg);color:var(--band-ink);display:grid;gap:10px}
+.gain-final p{margin:0;font-family:var(--serif);font-size:clamp(1.6rem,3.6vw,2.5rem);line-height:1.15;letter-spacing:-.015em}
+.gain-final p em{color:var(--band-accent)}
+.gain-final span{color:var(--band-ink-2);font-size:1.02rem}
+@media (prefers-color-scheme: dark){ .gain-final{border:1px solid var(--band-line)} }
 
-.themes{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:0}
-.themes li{display:flex;gap:14px;align-items:baseline;padding:14px 0;border-top:1px solid var(--line);font-size:1.02rem}
-.themes li:last-child{border-bottom:1px solid var(--line)}
-.themes li svg{width:16px;height:16px;flex:none;color:var(--accent);transform:translateY(2px)}
-.pull{font-family:var(--serif);font-size:clamp(1.9rem,4.2vw,3rem);line-height:1.08;letter-spacing:-.02em;margin:0 0 22px}
-.pull em{color:var(--accent)}
+/* ───────────────────────── Roadmap ───────────────────────── */
+.roadmap{background:var(--bg-2)}
+.weeks{display:grid;gap:18px;align-items:start}
+@media (min-width:1020px){ .weeks{grid-template-columns:repeat(3,1fr);gap:22px} }
+.week{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.week-head{display:grid;gap:2px;padding:24px 24px 18px}
+.wk-label{font-size:.76rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.wk-title{font-family:var(--serif);font-size:1.9rem;line-height:1.1;letter-spacing:-.015em}
+.wk-range{font-size:.88rem;color:var(--ink-3)}
+.wk-desc{margin:0;padding:0 24px 18px;color:var(--ink-2);font-size:.97rem;border-bottom:1px solid var(--line)}
+.rd-list{list-style:none;margin:0;padding:4px 0}
+.rd{display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:center;padding:14px 20px 14px 18px;border-top:1px solid var(--line)}
+.rd:first-child{border-top:0}
+.rd-img{margin:0;position:relative;width:72px;height:72px}
+.rd-img img{width:72px;height:72px;object-fit:cover;border-radius:14px;display:block;background:var(--bg-2)}
+.rd-img::after{content:"";position:absolute;inset:0;border-radius:14px;box-shadow:inset 0 0 0 1px rgba(27,23,18,.08);pointer-events:none}
+.rd-n{position:absolute;left:-6px;bottom:-6px;min-width:28px;height:28px;padding:0 6px;border-radius:999px;display:grid;place-items:center;font-family:var(--serif);font-size:.95rem;line-height:1;background:var(--surface);color:var(--ink);box-shadow:0 0 0 2px var(--surface), 0 2px 6px rgba(27,23,18,.18);z-index:1}
+.rd b{display:block;font-weight:600;font-size:1rem;line-height:1.35;color:var(--ink)}
+.rd div > span{display:block;font-size:.92rem;line-height:1.5;color:var(--ink-3);margin-top:3px}
+.rd.is-hl{background:var(--accent-soft)}
+.rd.is-hl .rd-n{background:var(--accent);color:var(--accent-ink);box-shadow:0 0 0 2px var(--accent-soft)}
+.rd.is-hl div > span{color:var(--ink-2)}
+@media (prefers-color-scheme: dark){ .rd-img img{filter:brightness(.88)} }
+.roadmap-note{margin:28px 0 0;padding:18px 22px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 var(--radius-sm) var(--radius-sm) 0;color:var(--ink-2);max-width:760px}
+.roadmap-note b{color:var(--ink)}
+
+/* ───────────────────────── Honest note ───────────────────────── */
+.honest .wrap{max-width:900px}
+.honest h2{font-size:clamp(2.1rem,5.6vw,3.9rem);line-height:1.04;letter-spacing:-.025em;margin:22px 0 30px;font-weight:360}
+.honest h2 em{color:var(--accent)}
+.honest-body{max-width:660px;margin-left:auto}
+.honest-body p{font-size:clamp(1.08rem,1.6vw,1.22rem);color:var(--ink-2);margin:0 0 1em}
+.honest-body strong{color:var(--ink);font-weight:600}
 
 /* ───────────────────────── Coach ───────────────────────── */
 .coach{background:var(--bg-2)}
@@ -605,7 +626,8 @@ section{padding-block:clamp(72px, 11vw, 140px)}
     </a>
     <nav class="nav" aria-label="Sayfa içi">
       <a class="link" href="#nasil">Nasıl işliyor</a>
-      <a class="link" href="#soz">Neden söz</a>
+      <a class="link" href="#kazanim">Kazanımlar</a>
+      <a class="link" href="#yol">21 gün</a>
       <a class="link" href="#koc">Koç</a>
       <a class="link" href="#sss">Sorular</a>
       <a class="btn btn--sm" href="https://wa.me/905459360738?text=BA%C5%9ELA" target="_blank" rel="noopener">
@@ -622,8 +644,8 @@ section{padding-block:clamp(72px, 11vw, 140px)}
   <div class="wrap">
     <div>
       <span class="eyebrow"><span class="rule"></span>21 günlük koçluk · WhatsApp'ta</span>
-      <h1 id="hero-title">Bu sefer bir liste değil, <em>bir söz</em><span class="dot">.</span></h1>
-      <p class="lead">Sözüm Var, WhatsApp'ta yürüyen 21 günlük bir alışkanlık ve kimlik koçluğu. Her sabah küçük bir adım, her akşam kısa bir soru. Takıldığında sana <strong>gerçek bir koç</strong> cevap verir.</p>
+      <h1 id="hero-title">Tembel değilsin. <em>Sadece “yarın” demekten yoruldun</em><span class="dot">.</span></h1>
+      <p class="lead">Kitabı aldın, salona yazıldın, pazartesiyi bekledin. İçinde kullanılmamış bir kapasite olduğunu biliyorsun. Sözüm Var, 21 gün boyunca her sabah WhatsApp'ta sana tek bir konu ve küçük bir adım getirir. Takıldığında <strong>gerçek bir koç</strong> cevap verir.</p>
       <a class="btn btn--lg" id="hero-cta" href="https://wa.me/905459360738?text=BA%C5%9ELA" target="_blank" rel="noopener">
         <svg aria-hidden="true"><use href="#i-chat"/></svg>
         WhatsApp'ta <kbd>BAŞLA</kbd> yaz
@@ -636,9 +658,6 @@ section{padding-block:clamp(72px, 11vw, 140px)}
     </div>
 
     <figure class="phone" aria-label="WhatsApp'ta bir günün örneği: sabah mesajı, Hazırım düğmesi ve günün metni" role="img">
-      <div class="margin-note" aria-hidden="true">sabah, senin<br>seçtiğin saatte
-        <svg viewBox="0 0 60 34"><path d="M2 6c18 0 34 6 48 22m0 0-9-2m9 2-1-9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-      </div>
       <div class="screen">
         <div class="chat-top">
           <svg class="seal" aria-hidden="true"><use href="#seal"/></svg>
@@ -704,11 +723,64 @@ section{padding-block:clamp(72px, 11vw, 140px)}
   </div>
 </section>
 
+<!-- ═════════════ OUTCOMES ═════════════ -->
+<section class="gains" id="kazanim" aria-labelledby="kazanim-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal"><span class="num">02</span><span class="rule"></span>21 gün sonra</span>
+      <h2 class="h2 reveal" id="kazanim-title">21 gün sonra elinde <em>ne olacak?</em></h2>
+      <p class="lead reveal">Geçip giden bir motivasyon dalgası değil. Her gün işine yarayacak ve sende kalacak araçlar.</p>
+    </div>
+    <ol class="gain-grid">
+        <li class="gain reveal">
+          <span class="gain-n" aria-hidden="true">01</span>
+          <h3>Neden ertelediğini bileceksin.</h3>
+          <p>Tembellik değil: beynin seni hayal kırıklığından korumaya çalışıyor. Bunu gördüğünde kendinle kavga etmeyi bırakırsın.</p>
+          <a class="gain-days" href="#yol">Gün 13</a>
+        </li>
+        <li class="gain reveal">
+          <span class="gain-n" aria-hidden="true">02</span>
+          <h3>Tek ve net bir hedefin olacak.</h3>
+          <p>“Daha düzenli olacağım” değil; ne, ne kadar, ne zamana kadar. Ve on hedefin yerine tek bir öncelik.</p>
+          <a class="gain-days" href="#yol">Gün 1 · 2</a>
+        </li>
+        <li class="gain reveal">
+          <span class="gain-n" aria-hidden="true">03</span>
+          <h3>Başlamak zor gelmeyecek.</h3>
+          <p>5 dakika kuralı, Kaizen'in bir dakikası, her sabah üç görev ve akşam bir tik. Dağ yerine basamak.</p>
+          <a class="gain-days" href="#yol">Gün 5 · 8 · 9</a>
+        </li>
+        <li class="gain reveal">
+          <span class="gain-n" aria-hidden="true">04</span>
+          <h3>Dikkatini geri alacaksın.</h3>
+          <p>Telefonla, dopaminle ve aynı anda beş iş yapma alışkanlığıyla başa çıkmanın somut yolları.</p>
+          <a class="gain-days" href="#yol">Gün 10 · 14 · 15</a>
+        </li>
+        <li class="gain reveal">
+          <span class="gain-n" aria-hidden="true">05</span>
+          <h3>Motivasyon bitince de devam edeceksin.</h3>
+          <p>Motivasyon bir dalgadır. Disiplinin zorlamadan değil sevgiden, iradenin küçük seçimlerden beslendiğini göreceksin.</p>
+          <a class="gain-days" href="#yol">Gün 11 · 16 · 20</a>
+        </li>
+        <li class="gain reveal">
+          <span class="gain-n" aria-hidden="true">06</span>
+          <h3>Kendinle barışacaksın.</h3>
+          <p>“Keşke”ler ile “ya olmazsa”lar arasında değil, şimdide. Konfor alanının seni korurken neden büyütmediğini anlayarak.</p>
+          <a class="gain-days" href="#yol">Gün 17 · 18 · 19</a>
+        </li>
+    </ol>
+    <div class="gain-final reveal">
+      <p>Ve en önemlisi: <em>kendi kendinin koçu</em> olacaksın.</p>
+      <span>21. günden sonra nasıl devam edeceğini bileceksin. Bunun için kimseye ihtiyacın olmayacak.</span>
+    </div>
+  </div>
+</section>
+
 <!-- ═════════════ HOW ═════════════ -->
 <section id="nasil" aria-labelledby="nasil-title">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow reveal"><span class="num">02</span><span class="rule"></span>Nasıl işliyor</span>
+      <span class="eyebrow reveal"><span class="num">03</span><span class="rule"></span>Nasıl işliyor</span>
       <h2 class="h2 reveal" id="nasil-title">Günde iki buluşma. <em>Gerisi senin hayatın.</em></h2>
       <p class="lead reveal">Yeni bir uygulama öğrenmen, bildirim ayarlaman, şifre hatırlaman gerekmiyor. Zaten her gün açtığın yerde, WhatsApp'ta.</p>
     </div>
@@ -727,7 +799,7 @@ section{padding-block:clamp(72px, 11vw, 140px)}
         <figure class="step-photo"><img src="img/hazirim-960.webp" srcset="img/hazirim-560.webp 560w, img/hazirim-960.webp 960w" sizes="(min-width:900px) 360px, 100vw" width="960" height="640" alt="Ahşap masada kahve eşliğinde deftere not alan eller" loading="lazy" decoding="async" style="object-position:45% 60%"></figure>
         <div class="when"><span class="tag"><svg aria-hidden="true"><use href="#i-book"/></svg>Hazırım</span><span class="n" aria-hidden="true">ii.</span></div>
         <h3>Bir dokunuşla günün metni açılır.</h3>
-        <p>1000–2400 kelimelik, üzerinde düşünülmüş gerçek bir metin ve o güne ait küçük bir adım. Klişe motivasyon sözü değil.</p>
+        <p>O günün konusunu anlatan, üzerinde düşünülmüş gerçek bir metin ve o güne ait küçük bir görev. Klişe motivasyon sözü değil.</p>
         <div class="mini" aria-hidden="true">
           <div class="bubble out">Hazırım</div>
         </div>
@@ -767,7 +839,7 @@ section{padding-block:clamp(72px, 11vw, 140px)}
 <section class="band" id="soz" aria-labelledby="soz-title">
   <div class="wrap contract-grid">
     <div>
-      <span class="eyebrow reveal"><span class="num">03</span><span class="rule"></span>Neden sözleşme</span>
+      <span class="eyebrow reveal"><span class="num">04</span><span class="rule"></span>Neden sözleşme</span>
       <h2 class="h2 reveal" id="soz-title" style="margin-top:22px">Liste unutulur. <em>Söz tutulur.</em></h2>
       <p class="lead reveal" style="margin-top:22px">Alışkanlık uygulamaları sana ne yapacağını sorar. Biz önce seni neyin yorduğunu ve kim olmak istediğini sorarız. Altı sorunun cevabından, senin kelimelerinle yazılmış bir sözleşme çıkar.</p>
       <ol class="anatomy">
@@ -811,47 +883,79 @@ section{padding-block:clamp(72px, 11vw, 140px)}
   </div>
 </section>
 
-<!-- ═════════════ 21 DAYS ═════════════ -->
-<section aria-labelledby="gun-title">
-  <div class="wrap days-grid">
-    <div>
-      <span class="eyebrow reveal"><span class="num">04</span><span class="rule"></span>21 gün</span>
-      <p class="pull reveal" id="gun-title" role="heading" aria-level="2" style="margin-top:22px">Küçük başlayan bitirir, <em>büyük başlayan bırakır.</em></p>
-      <p class="lead reveal">Program seni ilk gün koşturmaz. Her gün bir önceki günün üzerine küçük bir tuğla koyar. Yol boyunca şunlarla çalışırız:</p>
-      <ul class="themes">
-        <li class="reveal"><svg aria-hidden="true"><use href="#i-dot"/></svg>Ertelemenin neden olduğunu anlamak ve döngüyü kırmak</li>
-        <li class="reveal"><svg aria-hidden="true"><use href="#i-dot"/></svg>Hedefi, yapmamanın zor olacağı kadar küçük bir adıma indirmek</li>
-        <li class="reveal"><svg aria-hidden="true"><use href="#i-dot"/></svg>Motivasyonla disiplin arasındaki farkı günlük hayatta görmek</li>
-        <li class="reveal"><svg aria-hidden="true"><use href="#i-dot"/></svg>Kendine zaman açmak ve dikkatini korumak</li>
-        <li class="reveal"><svg aria-hidden="true"><use href="#i-dot"/></svg>Eski alışkanlığın yerine yenisini kurmak</li>
-        <li class="reveal"><svg aria-hidden="true"><use href="#i-dot"/></svg>Kendi ilerlemeni yargılamadan değerlendirmek</li>
-      </ul>
+<!-- ═════════════ ROADMAP ═════════════ -->
+<section class="roadmap" id="yol" aria-labelledby="yol-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal"><span class="num">05</span><span class="rule"></span>21 gün, 21 konu</span>
+      <h2 class="h2 reveal" id="yol-title">Küçük başlayan bitirir, <em>büyük başlayan bırakır.</em></h2>
+      <p class="lead reveal">Her sabah tek bir konu ve küçük bir görev. Program seni ilk gün koşturmaz; her gün bir öncekinin üzerine bir tuğla koyar. Üç hafta, üç aşama:</p>
     </div>
+    <div class="weeks">
+      <div class="week reveal">
+        <div class="week-head">
+          <span class="wk-label">1. Hafta</span>
+          <span class="wk-title">Netleş</span>
+          <span class="wk-range">Gün 1–7</span>
+        </div>
+        <p class="wk-desc">Neyi neden istediğini netleştirir, tek bir hedef seçer ve başlamanın önündeki küçük engelleri kaldırırsın.</p>
+        <ol class="rd-list" start="1">
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-01.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">1</span></figure><div><b>Gerçek Hedef ve 3-2-1 Metodu</b><span>Genel bir istek değil, ölçülebilir tek bir hedef: ne, ne kadar, ne zamana kadar.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-02.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">2</span></figure><div><b>Sen Superman misin?</b><span>Her şeyi aynı anda istemek yerine bütün enerjini tek bir önceliğe vermek.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-03.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">3</span></figure><div><b>Bahaneleri Aşmak ve Devam Etmek</b><span>Bahaneler seni eski konforda tutmak ister. Sıkıldığın an, öğrenmenin duvarıdır.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-04.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">4</span></figure><div><b>Plan Yapmak</b><span>“Gelecek yanılsaması”: planlarımızın çoğu neden aslında bir erteleme planıdır.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-05.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">5</span></figure><div><b>5 Dakika Kuralı</b><span>Beş dakikadan kısa süren işi hemen yap, zihnindeki açık pencereleri kapat.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-06.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">6</span></figure><div><b>Zaman Yönetimi</b><span>Herkesin 24 saati var. Fark, zamanını çalan o sesi tanımakta.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-07.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">7</span></figure><div><b>Rutinlerini Değiştirmeden Hayatını Değiştiremezsin</b><span>Değişim büyük patlamalarla değil, her gün tekrar eden küçük rutinlerle gelir.</span></div></li>
+        </ol>
+      </div>
+      <div class="week reveal">
+        <div class="week-head">
+          <span class="wk-label">2. Hafta</span>
+          <span class="wk-title">Başla ve sürdür</span>
+          <span class="wk-range">Gün 8–14</span>
+        </div>
+        <p class="wk-desc">Küçük adımlarla ilerler, takip etmeyi öğrenir ve dikkatini dağıtan şeylerden kontrolü geri alırsın.</p>
+        <ol class="rd-list" start="8">
+          <li class="rd is-hl"><figure class="rd-img"><img src="img/gun/gun-08.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">8</span></figure><div><b>Kaizen İlkesi</b><span>Sadece bir dakika. Beyin için en zor kısım başlamaktır.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-09.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">9</span></figure><div><b>Kontrol ve Takip</b><span>Her sabah üç görev, akşam yanına bir tik. Tamamlanma hissinin gücü.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-10.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">10</span></figure><div><b>Telefonunu Sen Yönet: Dijital Detoks</b><span>Telefonunu sen yönetmiyorsan o seni yönetir. Kontrolü geri almanın iki yolu.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-11.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">11</span></figure><div><b>Motivasyonsuz musun, Yoksa Motivasyon Sen misin?</b><span>Motivasyon bir dalgadır. Dalga çekildiğinde de yüzmeyi öğrenmek.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-12.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">12</span></figure><div><b>Beklentisiz Olmayı Öğrenmek</b><span>Hayatın her şeyi hazır sunmasını beklemeden elindekiyle başlamak.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-13.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">13</span></figure><div><b>Ertelemenin Gerçek Nedeni</b><span>Tembellik değil: beynin seni hayal kırıklığından korumaya çalışıyor.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-14.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">14</span></figure><div><b>Çok Fazla İş Yapabilmek Mümkün mü?</b><span>Meşgul olmak ilerlemek değildir. Odağını parçalamamak.</span></div></li>
+        </ol>
+      </div>
+      <div class="week reveal">
+        <div class="week-head">
+          <span class="wk-label">3. Hafta</span>
+          <span class="wk-title">Dönüş</span>
+          <span class="wk-range">Gün 15–21</span>
+        </div>
+        <p class="wk-desc">İç dünyana dönersin: irade, konfor alanı, zihnin nasıl değiştiği. Alışkanlığın kimliğe dönüştüğü hafta.</p>
+        <ol class="rd-list" start="15">
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-15.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">15</span></figure><div><b>Dopamin Detoksu</b><span>Kolay keyiflerin, zor ama besleyici işleri neden sıkıcı gösterdiğini anlamak.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-16.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">16</span></figure><div><b>İrade: Hazzı Erteleyebilme Gücü</b><span>Bugün keyif vermeyeni seçip yarın daha büyüğünü alabilmek.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-17.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">17</span></figure><div><b>İçsel Çatışma</b><span>“Keşke”ler ve “ya olmazsa”lar arasında kaybolmadan şimdide kalmak.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-18.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">18</span></figure><div><b>Konfor Alanı</b><span>Güvenli olan yer seni korur, ama büyütmez.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-19.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">19</span></figure><div><b>Zihin Nasıl Değişir?</b><span>İhtiyaç, kabul, inanç, yol ve tutku: değişimin beş adımı.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-20.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">20</span></figure><div><b>Disiplin: Sevgiyle Gelen Güç</b><span>Asıl güç zorlamak değil, sevmek. Sevgi varsa disiplin yanında gelir.</span></div></li>
+          <li class="rd"><figure class="rd-img"><img src="img/gun/gun-21.webp" width="192" height="192" alt="" loading="lazy" decoding="async"><span class="rd-n">21</span></figure><div><b>En Değerli Hazinen: Şimdi</b><span>Yolculuğun özeti ve bundan sonrası: en zor işe şimdi başlamak.</span></div></li>
+        </ol>
+      </div>
+    </div>
+    <p class="roadmap-note reveal"><b>Bir günü kaçırırsan:</b> zor günler programın parçası, kusuru değil. Yarın yeni bir gün. Buraya dönmen yeterli.</p>
+  </div>
+</section>
 
-    <div class="reveal">
-      <div class="cal" role="img" aria-label="21 günlük takvim. 8. gün işaretli: Kaizen İlkesi.">
-        <span class="d done">1</span><span class="d done">2</span><span class="d done">3</span><span class="d done">4</span><span class="d done">5</span><span class="d done">6</span><span class="d done">7</span>
-        <span class="d is-on">8</span><span class="d">9</span><span class="d">10</span><span class="d">11</span><span class="d">12</span><span class="d">13</span><span class="d">14</span>
-        <span class="d">15</span><span class="d">16</span><span class="d">17</span><span class="d">18</span><span class="d">19</span><span class="d">20</span><span class="d">21</span>
-      </div>
-      <div class="cal-legend" aria-hidden="true">
-        <span><i style="background:var(--accent-soft)"></i>Geride kalan günler</span>
-        <span><i style="background:var(--accent)"></i>Bugün</span>
-      </div>
-      <div class="cal-note">
-        <span class="pill">Gün 8</span>
-        <div>
-          <b>Kaizen İlkesi</b>
-          <p>Büyük değişim, fark edilmeyecek kadar küçük adımların toplamıdır. Bugün adımını küçültürsün, yarın yine gelirsin.</p>
-        </div>
-      </div>
-      <div class="cal-note">
-        <span class="pill" style="background:var(--ink);color:var(--bg)">Zor gün</span>
-        <div>
-          <b>Bir günü kaçırırsan</b>
-          <p>Zor günler programın parçası, kusuru değil. Yarın yeni bir gün. Buraya dönmen yeterli.</p>
-        </div>
-      </div>
+<!-- ═════════════ HONEST NOTE ═════════════ -->
+<section class="honest" aria-labelledby="durust-title">
+  <div class="wrap">
+    <span class="eyebrow reveal"><span class="num">06</span><span class="rule"></span>Dürüst bir not</span>
+    <h2 class="reveal" id="durust-title">21 gün sonra her şey istediğin gibi <em>gitmeyecek.</em></h2>
+    <div class="honest-body reveal">
+      <p>Bu program hayatını 21 günde baştan yazmayacak. Böyle bir söz veren birine de inanmamalısın.</p>
+      <p>Ama bir şey değişecek: davranışlarının farkına varıp sorumluluğunu aldığında, yola devam etmek için <strong>kimseye ihtiyaç duymayacaksın.</strong> Ne bir videoya, ne birinin seni zorlamasına, ne de doğru pazartesiye.</p>
     </div>
   </div>
 </section>
@@ -860,7 +964,7 @@ section{padding-block:clamp(72px, 11vw, 140px)}
 <section class="coach" id="koc" aria-labelledby="koc-title">
   <div class="wrap coach-grid">
     <div>
-      <span class="eyebrow reveal"><span class="num">05</span><span class="rule"></span>Koç</span>
+      <span class="eyebrow reveal"><span class="num">07</span><span class="rule"></span>Koç</span>
       <h2 class="h2 reveal" id="koc-title" style="margin-top:22px">Cevabı bir yapay zekâ yazmaz. <em>Bir insan yazar.</em></h2>
       <p class="lead reveal" style="margin-top:22px">Takıldığında WhatsApp'tan yazarsın. Mesajını bir koç okur, düşünür ve sana kendisi cevap verir. Hazır şablon yok, otomatik teselli yok.</p>
       <div class="compare reveal">
@@ -902,7 +1006,7 @@ section{padding-block:clamp(72px, 11vw, 140px)}
 <section aria-labelledby="kim-title">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow reveal"><span class="num">06</span><span class="rule"></span>Kimin için</span>
+      <span class="eyebrow reveal"><span class="num">08</span><span class="rule"></span>Kimin için</span>
       <h2 class="h2 reveal" id="kim-title">Herkes için değil. <em>Belki tam senin için.</em></h2>
     </div>
     <div class="fit">
@@ -932,7 +1036,7 @@ section{padding-block:clamp(72px, 11vw, 140px)}
 <section id="sss" aria-labelledby="sss-title" style="padding-top:0">
   <div class="wrap faq-grid">
     <div>
-      <span class="eyebrow reveal"><span class="num">07</span><span class="rule"></span>Sık sorulanlar</span>
+      <span class="eyebrow reveal"><span class="num">09</span><span class="rule"></span>Sık sorulanlar</span>
       <h2 class="h2 reveal" id="sss-title" style="margin-top:22px">Aklındaki <em>sorular.</em></h2>
       <p class="lead reveal" style="margin-top:22px">Burada olmayan bir şey mi var? WhatsApp'tan yaz, bir insan cevaplar.</p>
     </div>
@@ -940,39 +1044,39 @@ section{padding-block:clamp(72px, 11vw, 140px)}
       <details>
         <summary>Bir uygulama indirmem ya da hesap açmam gerekiyor mu?<span class="pm" aria-hidden="true"></span></summary>
         <div class="a"><p>Hayır. Her şey WhatsApp'ta olur. <code>BAŞLA</code> yazdığında altı soruluk giriş başlar; sonrasında mesajlar aynı sohbete gelir.</p></div>
-      </details>
+      </div>
       <details>
         <summary>Ne kadar sürüyor, günde ne kadar zamanımı alır?<span class="pm" aria-hidden="true"></span></summary>
-        <div class="a"><p>Program 21 gün sürer. Her sabah bir metin (1000–2400 kelime) ve o güne ait küçük bir adım gelir; akşam 21:00'deki soruyu tek dokunuşla cevaplarsın. Okuma ve adım için ne kadar zaman ayıracağın sana kalmış.</p></div>
-      </details>
+        <div class="a"><p>Program 21 gün sürer. Her sabah o günün konusunu anlatan bir metin ve küçük bir görev gelir; akşam 21:00'deki soruyu tek dokunuşla cevaplarsın. Görevlerin çoğu bilerek küçük tutuldu: bazen sadece bir dakika.</p></div>
+      </div>
       <details>
         <summary>Sabah mesajının saatini ben mi seçiyorum?<span class="pm" aria-hidden="true"></span></summary>
         <div class="a"><p>Evet. Sabah mesajı senin seçtiğin saatte gelir. Akşam check-in'i 21:00'de gelir.</p></div>
-      </details>
+      </div>
       <details>
         <summary>Cevapları yapay zekâ mı veriyor?<span class="pm" aria-hidden="true"></span></summary>
         <div class="a"><p>Hayır. Takıldığında yazdığın mesajları gerçek bir koç okur ve kendisi cevaplar. Bu, programın en önemli parçalarından biri.</p></div>
-      </details>
+      </div>
       <details>
         <summary>Hangi alışkanlık için kullanabilirim?<span class="pm" aria-hidden="true"></span></summary>
         <div class="a"><p>Sözü sen verirsin: spor, okuma, erken kalkma, bir dil çalışmak, ertelediğin bir işi bitirmek. Girişteki sorular sözünü senin hedefine göre şekillendirir.</p></div>
-      </details>
+      </div>
       <details>
         <summary>Bir günü kaçırırsam ne olur?<span class="pm" aria-hidden="true"></span></summary>
         <div class="a"><p>Hiçbir şey kaybolmaz. Zor günler programın parçası, kusuru değil. Yarın yeni bir gün; buraya dönmen yeterli.</p></div>
-      </details>
+      </div>
       <details>
         <summary>Bırakmak istersem?<span class="pm" aria-hidden="true"></span></summary>
         <div class="a"><p>Sohbete <code>DUR</code> yazman yeterli. Mesajlar durur; kimse seni ikna etmeye çalışmaz.</p></div>
-      </details>
+      </div>
       <details>
         <summary>Bu bir terapi mi?<span class="pm" aria-hidden="true"></span></summary>
         <div class="a"><p>Hayır. Sözüm Var bir koçluk programıdır; tıbbi ya da psikolojik bir tedavinin yerini tutmaz. Kendini iyi hissetmiyorsan bir sağlık uzmanıyla görüşmeni öneririz.</p></div>
-      </details>
+      </div>
       <details>
         <summary>Verilerim ne oluyor?<span class="pm" aria-hidden="true"></span></summary>
         <div class="a"><p>Hangi bilgileri neden kullandığımızı <a href="/gizlilik.html">Gizlilik Politikası</a>'nda anlattık. Verilerinin silinmesini istersen <a href="/veri-silme.html">Veri Silme</a> sayfasındaki adımları izleyebilirsin.</p></div>
-      </details>
+      </div>
     </div>
   </div>
 </section>

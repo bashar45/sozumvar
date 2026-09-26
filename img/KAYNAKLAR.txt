@@ -6,3 +6,27 @@ hazirim-*.webp    "Journal Notepad" — StockSnap            https://cdn.stocksn
 aksam-*.webp      "candle with books" — Flickr              https://live.staticflickr.com/5592/15288575081_58e210c861_b.jpg
 kalem-*.webp      "Pen Ink" — StockSnap                     https://cdn.stocksnap.io/img-thumbs/960w/V8A98C0U96.jpg
 baslangic-*.webp  "Running Shoes" — StockSnap               https://cdn.stocksnap.io/img-thumbs/960w/645GI8G1W4.jpg
+
+21 günlük yol haritası küçük görselleri (img/gun/gun-01..21.webp) — hepsi CC0, Openverse üzerinden.
+Kare kırpılmış, aynı renk ayarı uygulanmıştır. Kaynak adresleri:
+gun-01.webp  rawpixel  https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJ0YXJnZXRfZ29hbF9haW1pbmdfZGFydGJvYXJkXzQtaW1hZ2Uta3ljZjhxY2kuanBn.jpg
+gun-02.webp  rawpixel  https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJiYWxsc19qdWdnbGluZ19iYWxsc19qdWdnbGVfMC1pbWFnZS1reWJlYWk1bi5qcGc.jpg
+gun-03.webp  flickr    https://live.staticflickr.com/65535/55435783359_d9ce7a8f9f_b.jpg
+gun-04.webp  rawpixel  https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYyMDQ3Nzc3LXdpa2ltZWRpYS1pbWFnZS1rb3dvajJnbS5qcGc.jpg
+gun-05.webp  rawpixel  https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL2ZyaG91cmdsYXNzX3RpbWVfc2FuZF90cmFuc2llbmNlLWltYWdlLWt5YmI5dHF4LmpwZw.jpg
+gun-06.webp  stocksnap https://cdn.stocksnap.io/img-thumbs/960w/PFD4T6FBTZ.jpg
+gun-07.webp  rawpixel  https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA0L3Vwd2s2MTg1OTExMy13aWtpbWVkaWEtaW1hZ2Uta293cG1pcXUuanBn.jpg
+gun-08.webp  flickr    https://live.staticflickr.com/65535/54703120058_723d0677bc_b.jpg
+gun-09.webp  stocksnap https://cdn.stocksnap.io/img-thumbs/960w/TVEUBLIOSK.jpg
+gun-10.webp  stocksnap https://cdn.stocksnap.io/img-thumbs/960w/QK8UF7C718.jpg
+gun-11.webp  stocksnap https://cdn.stocksnap.io/img-thumbs/960w/BXTIUT9WIH.jpg
+gun-12.webp  rawpixel  https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL3B4NzMwMjE3LWltYWdlLWt3dnYzN3Z4LmpwZw.jpg
+gun-13.webp  stocksnap https://cdn.stocksnap.io/img-thumbs/960w/WJWJ8F7AYV.jpg
+gun-14.webp  stocksnap https://cdn.stocksnap.io/img-thumbs/960w/HHZ5NPNR1T.jpg
+gun-15.webp  rawpixel  https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHg1Njg3MjItaW1hZ2Uta3d2dmZoNXEuanBn.jpg
+gun-16.webp  stocksnap https://cdn.stocksnap.io/img-thumbs/960w/XTNRPGQBYL.jpg
+gun-17.webp  wordpress https://pd.w.org/2022/02/80861ffc432da5eb6.50294174-2048x1536.jpg
+gun-18.webp  rawpixel  https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHgxMTA4NTgxLWltYWdlLWt3dnk0Ym8yLmpwZw.jpg
+gun-19.webp  rawpixel  https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA2L3Vwd2s2MTgxODgxNy13aWtpbWVkaWEtaW1hZ2Uta293cHNhOGouanBn.jpg
+gun-20.webp  flickr    https://live.staticflickr.com/65535/53194126639_475d3a83be_b.jpg
+gun-21.webp  rawpixel  https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA2L3Vwd2szMTgzNTgyNi13aWtpbWVkaWEtaW1hZ2Uta29qcmFxeHUuanBn.jpg
